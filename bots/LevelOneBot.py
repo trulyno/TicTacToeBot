@@ -2,7 +2,7 @@ import random
 from utils import TicTacToeBoard
 
 
-class TicTacToeBot:
+class LevelOneBot:
     def __init__(self, symbol):
         self.symbol = symbol
 

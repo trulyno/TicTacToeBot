@@ -1,10 +1,11 @@
-from bots.LevelOneBot import TicTacToeBot
+from bots.LevelOneBot import LevelOneBot
+from bots.LevelTwoBot import LevelTwoBot
 from utils import TicTacToeBoard
 
 
 def play_bot_vs_bot():
-    bot1 = TicTacToeBot("X")
-    bot2 = TicTacToeBot("O")
+    bot1 = LevelOneBot("X")
+    bot2 = LevelTwoBot("O")
     tic_tac_toe_board = TicTacToeBoard()
 
     print("Tic Tac Toe - Bot vs Bot!")

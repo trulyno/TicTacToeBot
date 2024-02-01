@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bbf8a56-fc9c-44af-b042-56cd42dcb65c" name="Changes" comment="Level 2 bot">
-      <change afterPath="$PROJECT_DIR$/bot_vs_bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bots/LevelOneBot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bots/LevelTwoBot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/play_vs_bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot_vs_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot_vs_bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/LevelOneBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bots/LevelOneBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bots/LevelTwoBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bots/LevelTwoBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play_vs_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/play_vs_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
     "Python.play_vs_bot.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "level-2-bot",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }

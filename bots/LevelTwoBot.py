@@ -2,14 +2,14 @@ import random
 from utils import TicTacToeBoard
 
 
-class TicTacToeBot:
+class LevelTwoBot:
     def __init__(self, symbol):
         self.symbol = symbol
         self.board = TicTacToeBoard()
 
     def make_move(self, board):
         self.board.board = board
-        available_moves = [i for i in range(1, 10) if board[i - 1] == " "]
+        available_moves = [i for i in range(0, 9) if board[i] == " "]
 
         # Check if the bot can win in the next move
         for move in available_moves:

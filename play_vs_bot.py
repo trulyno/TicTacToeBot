@@ -1,4 +1,4 @@
-from bots.LevelTwoBot import TicTacToeBot
+from bots.LevelTwoBot import LevelTwoBot
 from utils import TicTacToeBoard
 
 
