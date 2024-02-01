@@ -40,6 +40,16 @@ def get_player_choice():
             print("Invalid input. Please enter a number.")
 
 
+def can_win_next_move(board, player):
+    for i in range(9):
+        if board[i] == " ":
+            temp_board = board.copy()
+            temp_board[i] = player
+            if check_winner(temp_board, player):
+                return True
+    return False
+
+
 def play_tic_tac_toe():
     player = "X"
     bot = "O"
@@ -61,7 +71,15 @@ def play_tic_tac_toe():
             print_board(board)
 
             if player == bot and play_with_bot:
-                choice = random.choice([i + 1 for i in range(9) if board[i] == " "])
+                if can_win_next_move(board, bot):
+                    # Bot wins in the next move
+                    choice = [i + 1 for i in range(9) if board[i] == " " and can_win_next_move(board, bot)][0]
+                elif can_win_next_move(board, player):
+                    # Block the player from winning
+                    choice = [i + 1 for i in range(9) if board[i] == " " and can_win_next_move(board, player)][0]
+                else:
+                    # Random choice if no winning move
+                    choice = random.choice([i + 1 for i in range(9) if board[i] == " "])
             else:
                 choice = get_player_choice()
 
