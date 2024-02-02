@@ -1,16 +1,20 @@
+def opposite_symbol(symbol):
+    return 'X' if symbol == 'O' else symbol
+
 
 class TicTacToeBoard:
     def __init__(self):
         self.board = [" "] * 9
 
-    def print_board(self):
-        print("///////////")
-        print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
-        print("---|---|---")
-        print(f" {self.board[3]} | {self.board[4]} | {self.board[5]} ")
-        print("---|---|---")
-        print(f" {self.board[6]} | {self.board[7]} | {self.board[8]} ")
-        print("///////////")
+    def print_board(self, display):
+        if display:
+            print("///////////")
+            print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
+            print("---|---|---")
+            print(f" {self.board[3]} | {self.board[4]} | {self.board[5]} ")
+            print("---|---|---")
+            print(f" {self.board[6]} | {self.board[7]} | {self.board[8]} ")
+            print("///////////")
 
     def check_winner(self, player):
         # Check rows, columns, and diagonals

@@ -1,8 +1,9 @@
 import random
 from utils import TicTacToeBoard
+from utils import opposite_symbol
 
 
-class LevelTwoBot:
+class LevelThreeBot:
     def __init__(self, symbol, verbose=False):
         self.symbol = symbol
         self.verbose = verbose
@@ -21,6 +22,17 @@ class LevelTwoBot:
                 board[move] = self.symbol
                 if self.verbose:
                     print(f"{self.symbol} thought it will win by moving to {move + 1}")
+                return board
+
+        # Check if the opponent can win in the next move
+        for move in available_moves:
+            temp_board = TicTacToeBoard()
+            temp_board.board = board.copy()
+            temp_board.board[move] = opposite_symbol(self.symbol)
+            if temp_board.check_winner(opposite_symbol(self.symbol)):
+                board[move] = self.symbol
+                if self.verbose:
+                    print(f"{self.symbol} stopped {opposite_symbol(self.symbol)} by moving to {move + 1}")
                 return board
 
         # If the bot cannot win in the next move, make a random move

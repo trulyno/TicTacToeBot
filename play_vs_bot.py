@@ -1,4 +1,4 @@
-from bots.LevelTwoBot import LevelTwoBot
+from bots.LevelThreeBot import LevelThreeBot
 from utils import TicTacToeBoard
 
 
@@ -13,14 +13,14 @@ def get_player_choice():
 
 def play_vs_bot():
     player = "X"
-    bot = TicTacToeBot("O")
+    bot = LevelThreeBot("O", True)
     tic_tac_toe_board = TicTacToeBoard()
 
     while True:
         print("Tic Tac Toe Game!")
 
         while True:
-            tic_tac_toe_board.print_board()
+            tic_tac_toe_board.print_board(True)
 
             choice = get_player_choice()
 
@@ -33,12 +33,12 @@ def play_vs_bot():
                 tic_tac_toe_board.board[choice - 1] = player
 
                 if tic_tac_toe_board.check_winner(player):
-                    tic_tac_toe_board.print_board()
+                    tic_tac_toe_board.print_board(True)
                     print(f"{player} wins!")
                     tic_tac_toe_board = TicTacToeBoard()
                     break
                 elif tic_tac_toe_board.is_board_full():
-                    tic_tac_toe_board.print_board()
+                    tic_tac_toe_board.print_board(True)
                     print("It's a tie!")
                     tic_tac_toe_board = TicTacToeBoard()
                     break
@@ -47,12 +47,12 @@ def play_vs_bot():
                 tic_tac_toe_board.board = bot.make_move(tic_tac_toe_board.board)
 
                 if tic_tac_toe_board.check_winner(bot.symbol):
-                    tic_tac_toe_board.print_board()
+                    tic_tac_toe_board.print_board(True)
                     print(f"{bot.symbol} wins! The bot is victorious!")
                     tic_tac_toe_board = TicTacToeBoard()
                     break
                 elif tic_tac_toe_board.is_board_full():
-                    tic_tac_toe_board.print_board()
+                    tic_tac_toe_board.print_board(True)
                     print("It's a tie!")
                     tic_tac_toe_board = TicTacToeBoard()
                     break
